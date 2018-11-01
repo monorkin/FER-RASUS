@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+  server:
+    build: .
+    volumes:
+      - .:/app
+  sensor:
+    build: ../Klijent
+    volumes:
+      - ../Klijent:/app
+    environment:
+      SERVER_HOST: http://server
+    scale: 10
