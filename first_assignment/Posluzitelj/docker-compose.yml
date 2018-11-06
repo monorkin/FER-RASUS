@@ -10,4 +10,4 @@ services:
       - ../Klijent:/app
     environment:
       SERVER_HOST: http://server
-    scale: 10
+    scale: 3

@@ -335,6 +335,8 @@ class Sensor
     socket.puts({ method: 'requestMeasurment', args: [username] }.to_json)
     reading = JSON.parse(socket.gets)
     Reading.new(reading['data'], reading['row'], reading['time_alive'])
+  rescue
+    nil
   end
 
   def register
@@ -345,7 +347,6 @@ end
 offset = rand(9) + 1
 LOGGER.info "Starting main thread in #{offset}sec..."
 sleep(offset)
-
 
 sensor = Sensor.new(ENV['PORT']&.to_i)
 
