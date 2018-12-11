@@ -14,8 +14,8 @@ services:
       - .:/app
     environment:
       PORT: 3000
-      LOSS_RATE: 1
-      AVERAGE_DELAY: 1
+      LOSS_RATE: 0.3
+      AVERAGE_DELAY: 3
       TIMEOUT: 3
       # LOG_LEVEL: 'debug'
     scale: 2
