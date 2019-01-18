@@ -18,4 +18,4 @@ services:
       AVERAGE_DELAY: 3
       TIMEOUT: 3
       # LOG_LEVEL: 'debug'
-    scale: 2
+    scale: 5

@@ -234,9 +234,9 @@ $logger.debug('Registering node')
 s = TCPSocket.new('registry', 4000)
 s.puts 'REGISTER'
 
-$logger.debug('Starting random sleep')
+$logger.info('Starting random sleep')
 sleep(rand(1..10))
-$logger.debug('Starting')
+$logger.info('Starting')
 
 node = Node.new
 node.call
