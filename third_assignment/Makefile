@@ -1,6 +1,9 @@
 DEFUALT_GOAL: re-run
 CC = `which gcc`
 
+analytical:
+	@./analytical.rb
+
 re-run:
 	@rm -f solution
 	@$(MAKE) run
